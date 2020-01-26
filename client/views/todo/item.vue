@@ -6,25 +6,25 @@
       v-model="todo.completed"
     >
     <label>{{todo.content}}</label>
-    <button class="destory" @click="deleteTodo"></button>
+    <button class="destroy" @click="deleteTodo"></button>
   </div>
 </template>
 
 <script>
   export default {
-    name: "item",
+    name: 'item',
     props: {
       todo: {
         type: Object,
-        required: true,
+        required: true
       }
     },
     methods: {
-      deleteTodo() {
-        this.$emit('del', this.todo.id)
+      deleteTodo () {
+        this.$emit('del', this.todo.id);
       }
     }
-  }
+  };
 </script>
 
 <style lang="stylus" scoped>
@@ -34,7 +34,7 @@
     font-size 24px
     border-bottom 1px solid rgba(0,0,0,0.06)
     &:hover{
-      .destory:after{
+      .destroy:after{
         content: '×'
       }
     }
@@ -66,13 +66,13 @@
     appearance: none;
     outline none
     &:after{
-      content url('../assets/images/round.svg')
+      content url('../../assets/images/round.svg')
     }
     &:checked:after{
-      content url('../assets/images/done.svg')
+      content url('../../assets/images/done.svg')
     }
   }
-  .destory{
+  .destroy{
     position: absolute;
     top: 0;
     right: 10px;

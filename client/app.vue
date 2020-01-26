@@ -8,23 +8,25 @@
 </template>
 
 <script>
-  import Headers from './todo/headers.vue'
-  import Todo from './todo/todo.vue'
-  import Footer from './todo/footer.jsx'
+  import Headers from './views/layout/headers.vue';
+  import Todo from './views/todo/todo.vue';
+  import Footer from './views/layout/footer.jsx';
+
+  // console.log(Headers.__docs);
 
   // 注释
   export default {
     components: {
       Headers,
       Todo,
-      Footer,
+      Footer
     },
-    data() {
+    data () {
       return {
         text: 'abc'
-      }
+      };
     }
-  }
+  };
 </script>
 
 <style lang="stylus" scoped>

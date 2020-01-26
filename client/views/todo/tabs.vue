@@ -17,36 +17,36 @@
 
 <script>
   export default {
-    name: "tabs",
+    name: 'tabs',
     props: {
       filter: {
         type: String,
-        required: true,
+        required: true
       },
       todos: {
         type: Array,
-        required: true,
+        required: true
       }
     },
-    data() {
+    data () {
       return {
         states: ['all', 'active', 'completed']
-      }
+      };
     },
     computed: {
-      unFinishedTodoLength() {
-        return this.todos.filter(todo => !todo.completed).length
+      unFinishedTodoLength () {
+        return this.todos.filter(todo => !todo.completed).length;
       }
     },
     methods: {
-      clearAllCompleted() {
-        this.$emit('clearAllCompleted')
+      clearAllCompleted () {
+        this.$emit('clearAllCompleted');
       },
-      toggleFilter(state) {
-        this.$emit('toggle', state)
+      toggleFilter (state) {
+        this.$emit('toggle', state);
       }
     }
-  }
+  };
 </script>
 
 <style lang="stylus" scoped>
